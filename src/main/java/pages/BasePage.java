@@ -111,6 +111,10 @@ public class BasePage {
         return locateElement(locator).getText();
     }
 
+    public String getValueFromElement(By locator) {
+        return locateElement(locator).getAttribute("value");
+    }
+
     public void clearTextFromElement(By locator) {
         locateElement(locator).clear();
     }
