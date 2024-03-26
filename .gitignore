@@ -69,3 +69,6 @@ allure-report/
 *.properties
 *.cmd
 *.exe
+
+#workfile
+workfiles/

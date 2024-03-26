@@ -43,7 +43,11 @@ public class PropertyManager {
     }
 
     public static BrowserName getBrowserName() {
-        return BrowserName.valueOf(getProperty(PropertyKeys.BROWSER_NAME));
+        String browserNameProperty = getProperty(PropertyKeys.BROWSER_NAME);
+        if (browserNameProperty == null || browserNameProperty.isEmpty()) {
+            return BrowserName.CHROME;
+        }
+        return BrowserName.valueOf(browserNameProperty);
     }
 
     public enum PropertyKeys {
