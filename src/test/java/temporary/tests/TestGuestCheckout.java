@@ -7,9 +7,14 @@ import pages.LoginPage;
 
 import static engine.drivers.WebDriverFactory.quitWebDriver;
 import static org.assertj.core.api.Assertions.assertThat;
-import static steps.MainPageSteps.*;
+import static steps.BaseSteps.*;
+import static steps.CartPageSteps.goToCheckout;
+import static steps.CartPageSteps.updateCart;
+import static steps.LoginPageSteps.goToAccountLogin;
+import static steps.LoginPageSteps.proceedAsGuest;
 
 public class TestGuestCheckout extends BaseTest {
+
     protected static LoginPage loginPage;
 
     @BeforeClass
@@ -28,18 +33,18 @@ public class TestGuestCheckout extends BaseTest {
         openPage();
         addToCart();
         goToCart();
+        updateCart();
         goToCheckout();
 
         // When:
-        loginPage.selectGuestAccountOption();
-        loginPage.clickContinueButton();
+        proceedAsGuest();
 
         // Then:
         validateURL("https://automationteststore.com/index.php?rt=checkout/guest_step_1");
     }
 
     @Test
-    public void continueWithEmptyCart() {
+    public void proceedToLoginOrRegister() {
         // Given:
         openPage();
 

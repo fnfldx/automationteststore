@@ -13,7 +13,8 @@ This project contains automated tests for the https://automationteststore.com we
 
 ## Introduction
 
-The AutomationTestStore Automated Testing Project aims to provide automated tests for the https://automationteststore.com website. These tests cover a range of scenarios, including user interactions, cart functionality, and checkout processes, to ensure the website operates as expected.
+The AutomationTestStore Automated Testing Project aims to provide automated tests for the https://automationteststore.com website.
+These tests cover a range of scenarios, including user interactions, cart functionality and checkout processes, to ensure the website operates as expected.
 
 ## Features
 

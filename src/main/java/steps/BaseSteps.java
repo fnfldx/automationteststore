@@ -12,7 +12,7 @@ import static engine.drivers.WebDriverFactory.getWebDriverInstance;
 import static engine.property.manager.PropertyManager.PropertyKeys.BASE_URL;
 import static engine.property.manager.PropertyManager.getProperty;
 
-public class MainPageSteps {
+public class BaseSteps {
 
     protected static CartPage cartPage;
 
@@ -28,11 +28,6 @@ public class MainPageSteps {
         validateURL(url);
     }
 
-    public static void goToAccountLogin() {
-        var loginOrRegister = getWebDriverInstance().findElement(By.id("customer_menu_top"));
-        loginOrRegister.click();
-    }
-
     public static void addToCart() {
         var addProductToCart = getWebDriverInstance().findElement(By.xpath("//*[@id='block_frame_latest_1770']/div/div[1]/div[2]/div[3]/a"));
         addProductToCart.click();
@@ -43,16 +38,6 @@ public class MainPageSteps {
         goToCart.click();
 
         validateURL("https://automationteststore.com/index.php?rt=checkout/cart");
-    }
-
-    public static void updateCart() {
-        cartPage = new CartPage();
-        cartPage.clickOnUpdateButton();
-    }
-
-    public static void goToCheckout() {
-        cartPage = new CartPage();
-        cartPage.clickOnFinalCheckoutButton();
     }
 
     public static void validateURL(String url) {
