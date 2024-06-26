@@ -1,4 +1,4 @@
-package apitests.model;
+package model;
 
 public enum Status {
     AVAILABLE,

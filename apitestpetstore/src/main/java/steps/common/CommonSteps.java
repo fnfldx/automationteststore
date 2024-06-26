@@ -1,8 +1,8 @@
-package apitests.steps.common;
+package steps.common;
 
-import apitests.clients.PetClient;
-import apitests.model.ResponseDetails;
-import apitests.steps.BaseSteps;
+import clients.PetClient;
+import model.ResponseDetails;
+import steps.BaseSteps;
 import io.cucumber.java.en.Then;
 
 public class CommonSteps extends BaseSteps {

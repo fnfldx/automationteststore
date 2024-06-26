@@ -1,4 +1,4 @@
-package apitests.model;
+package model;
 
 
 import lombok.AccessLevel;

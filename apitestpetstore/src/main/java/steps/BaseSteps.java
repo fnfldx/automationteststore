@@ -1,7 +1,7 @@
-package apitests.steps;
+package steps;
 
-import apitests.clients.PetClient;
-import apitests.model.ResponseDetails;
+import clients.PetClient;
+import model.ResponseDetails;
 
 public class BaseSteps {
 
